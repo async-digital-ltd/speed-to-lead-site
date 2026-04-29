@@ -226,9 +226,12 @@
     }
 
     /* ---------- Hero illustration: phone mockup ---------- */
+    /* Frame proportions follow a modern 9:19.5 smartphone form factor.
+       Bottom fades into the page so the device "extends" beyond the hero. */
     .phone {
       --phone-w: 320px;
       width: var(--phone-w);
+      aspect-ratio: 9 / 19.5;
       max-width: 100%;
       margin-left: auto;
       background: #2A3A4A;
@@ -236,6 +239,11 @@
       border-radius: 44px;
       border: 1px solid color-mix(in srgb, var(--accent) 70%, #000);
       position: relative;
+      display: flex;
+      flex-direction: column;
+      -webkit-mask-image: linear-gradient(to bottom, #000 48%, transparent 75%);
+              mask-image: linear-gradient(to bottom, #000 48%, transparent 75%);
+      transform: translateY(80px);
     }
     .phone::after {
       content: ""; position: absolute; top: 18px; left: 50%; transform: translateX(-50%);
@@ -245,7 +253,7 @@
       background: var(--bg);
       border-radius: 32px;
       padding: 44px 14px 18px;
-      min-height: 520px;
+      flex: 1;
       display: flex; flex-direction: column; gap: 10px;
     }
     .phone__statusbar {
@@ -289,7 +297,6 @@
     .thread {
       padding: 4px 6px 0;
       display: flex; flex-direction: column; gap: 12px;
-      flex: 1;
     }
     .thread__time {
       text-align: center;
@@ -327,14 +334,14 @@
       font-size: 13px;
       line-height: 1.4;
     }
-    .bubble--out {
-      align-self: flex-end;
-      background: var(--primary);
-      color: var(--on-primary);
-      border-bottom-right-radius: 4px;
+    .bubble--in {
+      align-self: flex-start;
+      background: color-mix(in srgb, var(--text) 8%, var(--bg));
+      color: var(--text);
+      border-bottom-left-radius: 4px;
     }
-    .bubble--out a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
-    .bubble__sender { font-size: 10px; color: var(--muted); margin-bottom: 4px; align-self: flex-end; }
+    .bubble--in a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+    .bubble__sender { font-size: 10px; color: var(--muted); margin-bottom: 4px; align-self: flex-start; }
 
     /* ---------- Problem cards ---------- */
     .cards-3 {
@@ -676,7 +683,7 @@
     /* ---------- Responsive ---------- */
     @media (max-width: 900px) {
       .hero__grid { grid-template-columns: 1fr; }
-      .phone { margin: 0 auto; }
+      .phone { margin: 0 auto -140px; transform: none; }
       .cards-3, .steps { grid-template-columns: 1fr; }
       .calc { grid-template-columns: 1fr; }
       .faq { grid-template-columns: 1fr; }
@@ -729,7 +736,7 @@
         </ul>
       </div>
 
-      <!-- Phone mockup: missed-call event → one outbound SMS with link preview → system-event log line -->
+      <!-- Phone mockup (patient's phone): outgoing call → no answer → incoming SMS from clinic with booking link -->
       <div class="hero__art" aria-hidden="true">
         <div class="phone">
           <div class="phone__screen">
@@ -754,15 +761,15 @@
               <div class="thread__time">Today · 09:42</div>
               <div class="missed-call">
                 <span class="missed-call__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><line x1="23" y1="1" x2="17" y2="7"/><line x1="17" y1="1" x2="23" y2="7"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><polyline points="16 2 22 2 22 8"/><line x1="22" y1="2" x2="15" y2="9"/></svg>
                 </span>
                 <div class="missed-call__text">
-                  <strong>Missed call · Patient</strong>
+                  <strong>Outgoing call · No answer</strong>
                   <small>Your Clinic · 09:42 · 18 sec</small>
                 </div>
               </div>
               <span class="bubble__sender">Speed to Lead · 09:42</span>
-              <div class="bubble bubble--out">Hi, sorry we missed your call at Your Clinic. Pick a time that suits you: <a href="#">cal.com/your-clinic/callback</a></div>
+              <div class="bubble bubble--in">Hi, sorry we missed your call at Your Clinic. Pick a callback time that suits you: <a href="#">cal.com/your-clinic/callback</a></div>
             </div>
           </div>
         </div>
