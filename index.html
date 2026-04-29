@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Speed to Lead | missed-call follow-up for UK dental clinics</title>
+  <meta name="description" content="Speed to Lead is a missed-call follow-up service for UK dental clinics. Every missed caller hears back within seconds with a link to book a callback." />
+  <link rel="icon" href="/assets/favicon-mark.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="stylesheet" href="https://async-digital.com/assets/brand.css" />
+  <script src="https://async-digital.com/assets/brand.js?v=2026-04-29" defer></script>
+  <style>
+    /* ---------- Design system extras ----------
+     * brand.css (loaded above, cross-domain) provides colour and type tokens.
+     * The values below are layout, motion, spacing, and base reset that the
+     * canonical brand.css does not currently carry. Mirrors the design-time
+     * tokens.css from claude.ai/design. If brand.css ever absorbs these,
+     * delete this block. */
+    :root {
+      --space-xs: 4px; --space-sm: 8px; --space-md: 16px; --space-lg: 24px; --space-xl: 44px; --space-2xl: 48px;
+      --radius-sm: 4px; --radius: 10px; --radius-lg: 16px; --radius-pill: 999px;
+      --border-hairline: 1px solid var(--border);
+      --focus-ring: 3px solid color-mix(in srgb, var(--primary) 35%, transparent);
+      --focus-offset: 3px;
+      --measure-h1: 30ch; --measure-intro: 68ch; --measure-prose: 72ch; --wrap: 960px;
+      --ease-out: cubic-bezier(0.2, 0.6, 0.2, 1);
+      --dur-1: 120ms; --dur-2: 200ms; --dur-3: 320ms;
+      --on-primary: #FFFFFF; --on-accent: #FFFFFF;
+      --font-ui: var(--font-sans);
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: var(--font-ui);
+      font-size: var(--size-body);
+      line-height: var(--lh-relaxed);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img, svg { display: block; }
+
+    /* ---------- Page baseline ---------- */
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); }
+    .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--space-lg); }
+
+    a { color: inherit; }
+    img, svg { display: block; }
+
+    /* ---------- Buttons / links ---------- */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 16px;
+      border-radius: var(--radius);
+      font: inherit;
+      font-weight: var(--weight-medium);
+      font-size: 15px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background var(--dur-1) var(--ease-out),
+                  border-color var(--dur-1) var(--ease-out),
+                  color var(--dur-1) var(--ease-out);
+      white-space: nowrap;
+    }
+    .btn--primary {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+    .btn--primary:hover { background: color-mix(in srgb, var(--primary) 94%, #000); }
+    .btn--primary:active { background: color-mix(in srgb, var(--primary) 90%, #000); }
+    .btn--ghost {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .btn--ghost:hover { border-color: color-mix(in srgb, var(--text) 25%, transparent); }
+    .btn--sm { padding: 8px 13px; font-size: 14px; }
+    .btn:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
+
+    .underline-link {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1px;
+      transition: border-color var(--dur-1) var(--ease-out);
+    }
+    .underline-link:hover { border-bottom-color: rgba(0,0,0,0.28); }
+
+    /* ---------- Nav ---------- */
+    .nav {
+      position: sticky; top: 0; z-index: 20;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+    }
+    .nav__inner {
+      display: flex; align-items: center; gap: var(--space-md);
+      height: 64px;
+    }
+    .nav__brand {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+      font-weight: var(--weight-medium);
+      letter-spacing: -0.01em;
+    }
+    .nav__brand img { height: 22px; width: auto; }
+    .nav__brand span { font-size: 15px; }
+    .nav__links {
+      margin-left: auto;
+      display: flex; align-items: center; gap: 6px;
+      list-style: none; padding: 0; margin-right: 0;
+    }
+    .nav__links a {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 8px 12px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: var(--weight-medium);
+      transition: color var(--dur-1) var(--ease-out), background var(--dur-1) var(--ease-out);
+    }
+    .nav__links a:hover { color: var(--text); background: color-mix(in srgb, var(--card) 70%, transparent); }
+    .nav__links .arrow { font-size: 12px; opacity: 0.7; }
+    .nav__cta { margin-left: 6px; }
+
+    @media (max-width: 720px) {
+      .nav__links li:not(:last-child) { display: none; }
+      .nav__cta { margin-left: auto; }
+    }
+
+    /* ---------- Eyebrow ---------- */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px;
+      font-weight: var(--weight-medium);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .eyebrow::before {
+      content: ""; display: inline-block;
+      width: 18px; height: 2px;
+      background: var(--primary);
+      border-radius: var(--radius-pill);
+    }
+
+    /* ---------- Section scaffolding ---------- */
+    .section { padding: clamp(56px, 8vw, 88px) 0; }
+    .section--card { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .section__head { max-width: 56ch; margin-bottom: clamp(28px, 4vw, 40px); }
+    .section h2 {
+      font-size: clamp(28px, 3.4vw, 36px);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      font-weight: var(--weight-bold);
+      margin-top: 14px;
+      max-width: 22ch;
+    }
+    .section__sub {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: var(--size-intro);
+      line-height: var(--lh-relaxed);
+      max-width: 60ch;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: clamp(48px, 7vw, 80px) 0 clamp(56px, 7vw, 88px); }
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: clamp(32px, 5vw, 64px);
+      align-items: center;
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 60%, transparent);
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .pill__dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--success) 22%, transparent);
+    }
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      font-weight: var(--weight-bold);
+      margin: 18px 0 0;
+      max-width: 16ch;
+    }
+    .hero__sub {
+      margin-top: 20px;
+      font-size: var(--size-intro);
+      line-height: var(--lh-relaxed);
+      color: var(--muted);
+      max-width: 56ch;
+    }
+    .hero__cta {
+      margin-top: 28px;
+      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+    }
+    .hero__meta {
+      margin: 28px 0 0; padding: 0;
+      list-style: none;
+      display: flex; flex-wrap: wrap; gap: 8px 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .hero__meta li { display: inline-flex; align-items: center; gap: 8px; }
+    .hero__meta li::before {
+      content: ""; width: 14px; height: 14px;
+      background: var(--primary);
+      -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center / contain no-repeat;
+              mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center / contain no-repeat;
+      flex-shrink: 0;
+    }
+
+    /* ---------- Hero illustration: phone mockup ---------- */
+    .phone {
+      --phone-w: 320px;
+      width: var(--phone-w);
+      max-width: 100%;
+      margin-left: auto;
+      background: #2A3A4A;
+      padding: 12px;
+      border-radius: 44px;
+      border: 1px solid color-mix(in srgb, var(--accent) 70%, #000);
+      position: relative;
+    }
+    .phone::after {
+      content: ""; position: absolute; top: 18px; left: 50%; transform: translateX(-50%);
+      width: 90px; height: 24px; background: #1a2530; border-radius: 999px;
+    }
+    .phone__screen {
+      background: var(--bg);
+      border-radius: 32px;
+      padding: 44px 14px 18px;
+      min-height: 520px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .phone__statusbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 12px 6px;
+      font-size: 12px;
+      font-weight: var(--weight-medium);
+      color: var(--text);
+    }
+    .phone__statusbar-icons { display: inline-flex; gap: 4px; align-items: center; opacity: 0.85; }
+    .phone__statusbar-icons svg { width: 14px; height: 14px; }
+
+    .phone__header {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 4px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .phone__avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      display: grid; place-items: center;
+      color: var(--primary);
+      font-weight: var(--weight-bold);
+      font-size: 13px;
+    }
+    .phone__contact { line-height: 1.2; }
+    .phone__contact strong { display: block; font-size: 14px; font-weight: var(--weight-medium); }
+    .phone__contact small { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; }
+    .phone__call-btn {
+      margin-left: auto;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--card);
+      display: grid; place-items: center;
+      color: var(--primary);
+    }
+    .phone__call-btn svg { width: 14px; height: 14px; }
+
+    .thread {
+      padding: 4px 6px 0;
+      display: flex; flex-direction: column; gap: 12px;
+      flex: 1;
+    }
+    .thread__time {
+      text-align: center;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .missed-call {
+      align-self: stretch;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--error);
+      border-radius: 10px;
+      padding: 10px 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .missed-call__icon {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--error) 12%, var(--bg));
+      display: grid; place-items: center;
+      color: var(--error);
+      flex-shrink: 0;
+    }
+    .missed-call__icon svg { width: 14px; height: 14px; }
+    .missed-call__text { line-height: 1.25; }
+    .missed-call__text strong { font-size: 12px; font-weight: var(--weight-medium); display: block; }
+    .missed-call__text small { font-size: 11px; color: var(--muted); }
+
+    .bubble {
+      max-width: 82%;
+      padding: 9px 12px;
+      border-radius: 16px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .bubble--out {
+      align-self: flex-end;
+      background: var(--primary);
+      color: var(--on-primary);
+      border-bottom-right-radius: 4px;
+    }
+    .bubble--out a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+    .bubble__sender { font-size: 10px; color: var(--muted); margin-bottom: 4px; align-self: flex-end; }
+
+    /* ---------- Problem cards ---------- */
+    .cards-3 {
+      display: grid; gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .problem-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .problem-card__num {
+      font-size: 13px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.02em;
+    }
+    .problem-card h3 {
+      margin-top: 14px;
+      font-size: 18px;
+      font-weight: var(--weight-medium);
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+    }
+    .problem-card p {
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: var(--lh-relaxed);
+      font-size: 15px;
+    }
+
+    /* ---------- How it works steps ---------- */
+    .steps {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .step {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      position: relative;
+    }
+    .step__num {
+      font-size: 13px;
+      font-weight: var(--weight-medium);
+      color: var(--primary);
+      letter-spacing: 0.04em;
+      font-variant-numeric: tabular-nums;
+    }
+    .step h3 {
+      margin-top: 12px;
+      font-size: 18px;
+      font-weight: var(--weight-medium);
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+    .step p {
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: var(--lh-relaxed);
+      font-size: 15px;
+    }
+
+    /* ---------- Calculator ---------- */
+    .calc {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: clamp(24px, 4vw, 40px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+    }
+    .calc__inputs {
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label {
+      font-size: 13px;
+      font-weight: var(--weight-medium);
+      color: var(--text);
+    }
+    .field__hint {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .field__row {
+      display: flex; align-items: stretch;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color var(--dur-1) var(--ease-out), box-shadow var(--dur-1) var(--ease-out);
+    }
+    .field__row:focus-within {
+      border-color: color-mix(in srgb, var(--primary) 50%, var(--border));
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent);
+    }
+    .field__prefix {
+      display: grid; place-items: center;
+      padding: 0 14px;
+      background: var(--card);
+      color: var(--muted);
+      font-weight: var(--weight-medium);
+      border-right: 1px solid var(--border);
+      font-size: 15px;
+    }
+    .field__row input {
+      flex: 1;
+      border: 0; outline: 0;
+      padding: 12px 14px;
+      font: inherit;
+      font-size: 16px;
+      background: transparent;
+      color: var(--text);
+      width: 100%;
+      min-width: 0;
+    }
+    .calc__assumption {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex; gap: 10px;
+      padding: 12px 14px;
+      background: var(--card);
+      border-radius: var(--radius);
+    }
+    .calc__assumption strong { color: var(--text); font-weight: var(--weight-medium); }
+
+    .calc__result {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .calc__result-label {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+    .calc__result-figure {
+      font-size: clamp(40px, 5vw, 56px);
+      font-weight: var(--weight-bold);
+      letter-spacing: -0.025em;
+      line-height: 1;
+      color: var(--primary);
+      font-variant-numeric: tabular-nums;
+    }
+    .calc__result-figure .currency { color: var(--primary); }
+    .calc__result-figure .per { color: var(--muted); font-size: 0.4em; font-weight: var(--weight-regular); margin-left: 6px; letter-spacing: 0; }
+    .calc__result-detail {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-top: 6px;
+    }
+
+    .pricing-note {
+      margin-top: 20px;
+      padding: 18px 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .pricing-note strong { color: var(--text); font-weight: var(--weight-medium); }
+
+    /* ---------- Trust band ---------- */
+    .trust-band {
+      display: flex; flex-wrap: wrap;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--bg);
+      overflow: hidden;
+    }
+    .trust-band__item {
+      flex: 1 1 220px;
+      padding: 24px 28px;
+      display: flex; flex-direction: column; gap: 4px;
+      border-right: 1px solid var(--border);
+    }
+    .trust-band__item:last-child { border-right: 0; }
+    .trust-band__label {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .trust-band__value {
+      font-size: 15px;
+      font-weight: var(--weight-medium);
+      color: var(--text);
+      line-height: 1.4;
+    }
+    @media (max-width: 720px) {
+      .trust-band__item { border-right: 0; border-bottom: 1px solid var(--border); }
+      .trust-band__item:last-child { border-bottom: 0; }
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq {
+      display: grid;
+      grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+      gap: clamp(24px, 5vw, 64px);
+      align-items: flex-start;
+    }
+    .faq__list {
+      border-top: 1px solid var(--border);
+    }
+    .faq__item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq__item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 0;
+      font-size: 17px;
+      font-weight: var(--weight-medium);
+      color: var(--text);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px;
+      letter-spacing: -0.01em;
+    }
+    .faq__item summary::-webkit-details-marker { display: none; }
+    .faq__icon {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      display: grid; place-items: center;
+      flex-shrink: 0;
+      transition: transform var(--dur-2) var(--ease-out), background var(--dur-1) var(--ease-out);
+      color: var(--muted);
+    }
+    .faq__item[open] .faq__icon {
+      transform: rotate(45deg);
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--on-primary);
+    }
+    .faq__icon svg { width: 12px; height: 12px; }
+    .faq__answer {
+      padding: 0 0 22px;
+      color: var(--muted);
+      line-height: var(--lh-relaxed);
+      font-size: 15px;
+      max-width: 64ch;
+    }
+
+    /* ---------- Final CTA band ---------- */
+    .final-cta {
+      background: var(--accent);
+      color: var(--on-accent);
+      border-radius: var(--radius-lg);
+      padding: clamp(36px, 5vw, 56px);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 28px; flex-wrap: wrap;
+    }
+    .final-cta__copy { max-width: 36ch; }
+    .final-cta__copy h2 {
+      font-size: clamp(26px, 3vw, 32px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      font-weight: var(--weight-bold);
+      color: var(--on-accent);
+      margin: 0;
+    }
+    .final-cta__copy p {
+      margin-top: 10px;
+      color: color-mix(in srgb, var(--on-accent) 78%, transparent);
+      font-size: var(--size-intro);
+      line-height: var(--lh-relaxed);
+    }
+    .final-cta .btn--primary {
+      background: var(--bg);
+      color: var(--primary);
+      font-size: 15px;
+      padding: 13px 18px;
+    }
+    .final-cta .btn--primary:hover { background: #fff; }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 64px 0 40px;
+      margin-top: 40px;
+    }
+    .footer__cols {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+      gap: 40px;
+    }
+    .footer__brand img { height: 24px; }
+    .footer__blurb {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+      max-width: 32ch;
+    }
+    .footer__col h4 {
+      font-size: 13px;
+      font-weight: var(--weight-medium);
+      color: var(--text);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+    .footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .footer__col a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color var(--dur-1) var(--ease-out);
+    }
+    .footer__col a:hover { color: var(--text); }
+    .footer__col .arrow { font-size: 11px; opacity: 0.6; margin-left: 2px; }
+
+    .footer__meta {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex; flex-direction: column; gap: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .footer__meta-line { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+    .footer__meta-sep { color: var(--border); }
+    .footer__meta-nowrap { white-space: nowrap; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .hero__grid { grid-template-columns: 1fr; }
+      .phone { margin: 0 auto; }
+      .cards-3, .steps { grid-template-columns: 1fr; }
+      .calc { grid-template-columns: 1fr; }
+      .faq { grid-template-columns: 1fr; }
+      .footer__cols { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 520px) {
+      .footer__cols { grid-template-columns: 1fr; }
+      .final-cta { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav" aria-label="Primary">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Async Digital, home">
+        <img src="/assets/logo-horizontal.svg" alt="" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://async-digital.com" target="_blank" rel="noopener">Async Digital <span class="arrow">↗</span></a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm nav__cta" href="#book">Book a call</a>
+    </div>
+  </nav>
+
+  <span id="top"></span>
+
+  <!-- ============ HERO ============ -->
+  <header class="section hero" role="banner">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <span class="pill">
+          <span class="pill__dot" aria-hidden="true"></span>
+          Cardiff · UK dental clinics
+        </span>
+        <h1>Stop losing patients to missed calls</h1>
+        <p class="hero__sub">Speed to Lead is a missed-call follow-up service for dental clinics. Every missed caller hears back within seconds with a link to book a callback. No hardware, no new phone line, no patients falling through the cracks.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#book">Book a 15-min call</a>
+          <a class="btn btn--ghost" href="#how">See how it works →</a>
+        </div>
+        <ul class="hero__meta">
+          <li>No hardware to install</li>
+          <li>Works alongside your existing line</li>
+          <li>Set up in one visit</li>
+        </ul>
+      </div>
+
+      <!-- Phone mockup: missed-call event → one outbound SMS with link preview → system-event log line -->
+      <div class="hero__art" aria-hidden="true">
+        <div class="phone">
+          <div class="phone__screen">
+            <div class="phone__statusbar">
+              <span>09:43</span>
+              <span class="phone__statusbar-icons">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12" y2="20"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="4" y="9" width="12" height="6" rx="1"/><rect x="21" y="10" width="1.5" height="4" rx="0.5"/></svg>
+              </span>
+            </div>
+            <div class="phone__header">
+              <div class="phone__avatar">YC</div>
+              <div class="phone__contact">
+                <strong>Your Clinic</strong>
+                <small>SMS · today</small>
+              </div>
+              <div class="phone__call-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+            </div>
+            <div class="thread">
+              <div class="thread__time">Today · 09:42</div>
+              <div class="missed-call">
+                <span class="missed-call__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><line x1="23" y1="1" x2="17" y2="7"/><line x1="17" y1="1" x2="23" y2="7"/></svg>
+                </span>
+                <div class="missed-call__text">
+                  <strong>Missed call · Patient</strong>
+                  <small>Your Clinic · 09:42 · 18 sec</small>
+                </div>
+              </div>
+              <span class="bubble__sender">Speed to Lead · 09:42</span>
+              <div class="bubble bubble--out">Hi, sorry we missed your call at Your Clinic. Pick a time that suits you: <a href="#">cal.com/your-clinic/callback</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ THE PROBLEM ============ -->
+  <section class="section section--card" id="problem" aria-labelledby="problem-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="eyebrow">Why this matters</span>
+        <h2 id="problem-title">A missed call is a missed patient.</h2>
+      </div>
+      <div class="cards-3">
+        <article class="problem-card">
+          <div class="problem-card__num">01</div>
+          <h3>Reception is busy with chair-side patients</h3>
+          <p>The phone rings while your team is checking someone in, taking payment, or steadying a nervous child. The call goes unanswered, and nobody has time to chase it back.</p>
+        </article>
+        <article class="problem-card">
+          <div class="problem-card__num">02</div>
+          <h3>Callers hang up and try the next clinic on Google</h3>
+          <p>A patient looking for a same-week appointment will call three clinics in a row. The first one to answer (or to follow up) wins the booking. Silence loses it.</p>
+        </article>
+        <article class="problem-card">
+          <div class="problem-card__num">03</div>
+          <h3>You never know how many enquiries you missed</h3>
+          <p>Without a system, missed calls are invisible. They don't show up in your diary, your reports, or your end-of-month review. The lost revenue is lost quietly.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="eyebrow">How it works</span>
+        <h2 id="how-title">Three steps. No hardware.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <div class="step__num">01</div>
+          <h3>We detect the missed call</h3>
+          <p>Works alongside your existing line. Nothing to install. Nothing for reception to remember.</p>
+        </li>
+        <li class="step">
+          <div class="step__num">02</div>
+          <h3>The caller gets an SMS within seconds</h3>
+          <p>A friendly message with a link to book a callback at a time that suits them.</p>
+        </li>
+        <li class="step">
+          <div class="step__num">03</div>
+          <h3>The booking lands in your diary</h3>
+          <p>Your team calls back, the patient books in, nothing slips.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ WORKED EXAMPLE / CALC ============ -->
+  <section class="section section--card" id="pricing" aria-labelledby="calc-title">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="eyebrow">What it's worth</span>
+        <h2 id="calc-title">The maths on a busy week.</h2>
+      </div>
+      <div class="calc">
+        <div class="calc__inputs">
+          <div class="field">
+            <label for="missed">Missed calls per month</label>
+            <div class="field__row">
+              <input type="number" id="missed" inputmode="numeric" min="0" max="999" value="30" />
+            </div>
+            <span class="field__hint">A typical mid-sized clinic sees 20–60 unanswered calls a month.</span>
+          </div>
+          <div class="field">
+            <label for="value">Average new-patient value (£)</label>
+            <div class="field__row">
+              <span class="field__prefix">£</span>
+              <input type="number" id="value" inputmode="numeric" min="0" max="99999" value="450" />
+            </div>
+            <span class="field__hint">Lifetime value of a new patient over the first year. Helen will set the right number for your clinic on the call.</span>
+          </div>
+          <div class="calc__assumption">
+            <strong>Assumption:</strong> 20% of recovered missed calls become a booking. Conservative for an automated SMS within seconds.
+          </div>
+        </div>
+
+        <div class="calc__result">
+          <span class="calc__result-label">Recovered revenue at 20% callback conversion</span>
+          <div class="calc__result-figure">
+            <span id="result">£2,700</span><span class="per">/ month</span>
+          </div>
+          <p class="calc__result-detail">That's <span id="result-bookings">6</span> additional patients a month who would otherwise have called the next clinic on Google.</p>
+        </div>
+      </div>
+
+      <div class="pricing-note">
+        <strong>Speed to Lead is a flat monthly fee.</strong> No setup fee, no per-message charge, no per-clinic surprises. Exact figure on the call. Three-month initial term, then rolling monthly.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAND ============ -->
+  <section class="section" aria-label="Trust">
+    <div class="wrap">
+      <div class="trust-band">
+        <div class="trust-band__item">
+          <span class="trust-band__label">Where we are</span>
+          <span class="trust-band__value">Cardiff-based</span>
+        </div>
+        <div class="trust-band__item">
+          <span class="trust-band__label">Who runs onboarding</span>
+          <span class="trust-band__value">Helen Nash, GDC #176698</span>
+        </div>
+        <div class="trust-band__item">
+          <span class="trust-band__label">Registered &amp; ICO</span>
+          <span class="trust-band__value">Async Digital Ltd · Co. No. 16950485 · ICO ZC134261</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section--card" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="faq">
+        <div class="faq__head">
+          <span class="eyebrow">Questions practice managers ask</span>
+          <h2 id="faq-title" style="margin-top: 14px;">Common questions.</h2>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>
+              Will it work with our existing phone system?
+              <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </summary>
+            <div class="faq__answer">Yes. Speed to Lead sits alongside your existing line, whether VoIP, traditional, or hosted. There's no new phone line, no hardware in the building, and nothing for reception to operate. We'll confirm the specifics for your provider on the call.</div>
+          </details>
+          <details class="faq__item">
+            <summary>
+              What happens if a caller doesn't have a mobile?
+              <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </summary>
+            <div class="faq__answer">SMS is the default because most patient enquiries come from a mobile. Callers from a landline don't receive a message. They're flagged on a daily summary so reception can call them back manually when there's a quieter moment.</div>
+          </details>
+          <details class="faq__item">
+            <summary>
+              Can we customise the SMS wording?
+              <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </summary>
+            <div class="faq__answer">Yes. We start from a tested default that mentions your clinic name and the callback link, then tune the wording with you in week one. You can change it later by emailing us. Typical turnaround is the same day.</div>
+          </details>
+          <details class="faq__item">
+            <summary>
+              What about GDPR?
+              <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </summary>
+            <div class="faq__answer">We store call metadata (number, time, duration) for 30 days. We do not record call audio. Async Digital Ltd is registered with the ICO (ZC134261) and signs a data-processing agreement with every clinic before go-live.</div>
+          </details>
+          <details class="faq__item">
+            <summary>
+              How long does setup take?
+              <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </summary>
+            <div class="faq__answer">One visit, typically 60–90 minutes on-site or remote. We confirm your phone provider, agree the SMS wording, connect the booking link, and run a live test. You're handling missed calls automatically the same day.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="section" id="book">
+    <div class="wrap">
+      <div class="final-cta">
+        <div class="final-cta__copy">
+          <h2>Want to see it in action?</h2>
+          <p>Book a 15-min call with Helen.</p>
+        </div>
+        <a class="btn btn--primary" href="#book">Book a 15-min call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer__cols">
+        <div class="footer__brand-col">
+          <a class="footer__brand" href="#top" aria-label="Async Digital home">
+            <img src="/assets/logo-horizontal.svg" alt="Async Digital" />
+          </a>
+          <p class="footer__blurb">A small UK studio building quiet, useful automation for dental clinics.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Speed to Lead</h4>
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#book">Book a call</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="https://async-digital.com" target="_blank" rel="noopener">Async Digital <span class="arrow">↗</span></a></li>
+            <li><a data-brand-mailto href="mailto:info@async-digital.com">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="https://async-digital.com/privacy/speed-to-lead.html">Privacy</a></li>
+            <li><a href="https://async-digital.com/terms">Terms</a></li>
+            <li><a href="https://ico.org.uk" target="_blank" rel="noopener">ICO ZC134261 <span class="arrow">↗</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__meta">
+        <div class="footer__meta-line">
+          <span>© <span id="year"></span> Async Digital Ltd</span>
+          <span class="footer__meta-sep" aria-hidden="true">·</span>
+          <span>Registered in England &amp; Wales</span>
+          <span class="footer__meta-sep" aria-hidden="true">·</span>
+          <span class="footer__meta-nowrap">Co. No. 16950485</span>
+          <span class="footer__meta-sep" aria-hidden="true">·</span>
+          <span>167–169 Great Portland Street, London, <span class="footer__meta-nowrap">W1W 5PF</span></span>
+        </div>
+        <div class="footer__meta-line">
+          <span>Information Commissioner's Office registration</span>
+          <span class="footer__meta-sep" aria-hidden="true">·</span>
+          <span class="footer__meta-nowrap">ICO ZC134261</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Calculator
+    const missedInput = document.getElementById("missed");
+    const valueInput = document.getElementById("value");
+    const resultEl = document.getElementById("result");
+    const bookingsEl = document.getElementById("result-bookings");
+    const fmt = new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP", maximumFractionDigits: 0 });
+
+    function recompute() {
+      const missed = Math.max(0, parseFloat(missedInput.value) || 0);
+      const value = Math.max(0, parseFloat(valueInput.value) || 0);
+      const conv = 0.20;
+      const recovered = missed * conv;
+      const revenue = recovered * value;
+      resultEl.textContent = fmt.format(revenue);
+      bookingsEl.textContent = recovered.toFixed(recovered % 1 === 0 ? 0 : 1);
+    }
+    missedInput.addEventListener("input", recompute);
+    valueInput.addEventListener("input", recompute);
+    recompute();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Speed to Lead",
+    "description": "Missed-call follow-up service for UK dental clinics. Every missed caller hears back within seconds with a link to book a callback.",
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://async-digital.com/#organization",
+      "name": "Async Digital",
+      "legalName": "Async Digital Ltd",
+      "url": "https://async-digital.com"
+    },
+    "serviceType": "Missed-call follow-up automation",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "name": "Dental clinics"
+    }
+  }
+  </script>
+</body>
+</html>
