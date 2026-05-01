@@ -559,39 +559,6 @@
     }
     .pricing-note strong { color: var(--text); font-weight: var(--weight-medium); }
 
-    /* ---------- Trust band ---------- */
-    .trust-band {
-      display: flex; flex-wrap: wrap;
-      gap: 0;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      background: var(--bg);
-      overflow: hidden;
-    }
-    .trust-band__item {
-      flex: 1 1 220px;
-      padding: 24px 28px;
-      display: flex; flex-direction: column; gap: 4px;
-      border-right: 1px solid var(--border);
-    }
-    .trust-band__item:last-child { border-right: 0; }
-    .trust-band__label {
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .trust-band__value {
-      font-size: 15px;
-      font-weight: var(--weight-medium);
-      color: var(--text);
-      line-height: 1.4;
-    }
-    @media (max-width: 720px) {
-      .trust-band__item { border-right: 0; border-bottom: 1px solid var(--border); }
-      .trust-band__item:last-child { border-bottom: 0; }
-    }
-
     /* ---------- FAQ ---------- */
     .faq {
       display: grid;
@@ -820,11 +787,18 @@
     }
     .band-card__linkedin:hover { border-bottom-color: var(--primary); }
     .band-card__linkedin svg { color: var(--primary); width: 13px; height: 13px; }
+    .team-band__meta {
+      margin: 22px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.01em;
+    }
     .team-band__link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-top: 22px;
+      margin-top: 14px;
       color: var(--primary);
       text-decoration: none;
       font-weight: var(--weight-medium);
@@ -1025,26 +999,6 @@
     </div>
   </section>
 
-  <!-- ============ TRUST BAND ============ -->
-  <section class="section" aria-label="Trust">
-    <div class="wrap">
-      <div class="trust-band">
-        <div class="trust-band__item">
-          <span class="trust-band__label">Where we are</span>
-          <span class="trust-band__value">Cardiff-based</span>
-        </div>
-        <div class="trust-band__item">
-          <span class="trust-band__label">Who runs onboarding</span>
-          <span class="trust-band__value">Helen Nash, GDC #176698</span>
-        </div>
-        <div class="trust-band__item">
-          <span class="trust-band__label">Registered &amp; ICO</span>
-          <span class="trust-band__value">Async Digital Ltd · Co. No. 16950485 · ICO ZC134261</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ TEAM BAND ============ -->
   <section class="section" aria-labelledby="team-band-title">
     <div class="wrap">
@@ -1084,7 +1038,9 @@
           </article>
         </div>
 
-        <a class="team-band__link" href="https://async-digital.com/about/">Speed to Lead is built by Async Digital — meet the team &rarr;</a>
+        <p class="team-band__meta">Operating from Cardiff &middot; Async Digital Ltd &middot; Co. No. 16950485 &middot; ICO ZC134261</p>
+
+        <a class="team-band__link" href="https://async-digital.com/about/">Meet the team &rarr;</a>
       </div>
     </div>
   </section>
