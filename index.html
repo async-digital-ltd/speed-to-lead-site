@@ -972,10 +972,10 @@
             <span class="field__hint">A typical mid-sized clinic sees 20–60 unanswered calls a month.</span>
           </div>
           <div class="field">
-            <label for="value">Average new-patient value (£)</label>
+            <label for="patient-value">Average new-patient value (£)</label>
             <div class="field__row">
               <span class="field__prefix">£</span>
-              <input type="number" id="value" inputmode="numeric" min="0" max="99999" value="450" />
+              <input type="number" id="patient-value" inputmode="numeric" min="0" max="99999" value="450" />
             </div>
             <span class="field__hint">Lifetime value of a new patient over the first year. Helen will set the right number for your clinic on the call.</span>
           </div>
@@ -1131,7 +1131,7 @@
 
     // Calculator
     const missedInput = document.getElementById("missed");
-    const valueInput = document.getElementById("value");
+    const valueInput = document.getElementById("patient-value");
     const resultEl = document.getElementById("result");
     const bookingsEl = document.getElementById("result-bookings");
     const fmt = new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP", maximumFractionDigits: 0 });
